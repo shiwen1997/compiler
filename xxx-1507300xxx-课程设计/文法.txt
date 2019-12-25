@@ -1,0 +1,75 @@
+S->void main(){A}
+
+A->CA
+A->¿Õ
+
+C->XBR
+
+
+/*ÉùÃ÷±äÁ¿*/
+X->YZ;
+X-¿Õ
+Y->int
+Y->char
+Y->bool
+Z->UZ'
+Z'->,Z
+Z'->¿Õ
+
+
+/*¸³ÖµÓï¾ä*/
+U->ASS_U id U'
+U'->L EQ_U
+U'->¿Õ
+
+
+/*¿ØÖÆÓï¾ä*/
+B->if(G) IF_FJ {A} IF_BACKPATCH_FJ IF_RJ else{A} IF_BACKPATCH_RJ
+B->while(G) WHILE_FJ {A} WHILE_RJ WHILE_BACKPATCH_FJ
+B->for(YZ; G FOR_FJ ;Q){A SINGLE} FOR_RJ FOR_BACKPATH_FJ
+B->scanf("%d",&F)SCANF A;
+B->prinf("%d",F)PRINT A;
+B->¿Õ
+
+/*¸³ÖµÓï¾ä*/
+R->@ASS_R id = L @EQ;
+R->¿Õ
+
+/*ÅÐ¶ÏÓï¾ä*/
+G->FDF COMPARE
+G->(E)
+G->!E
+E->HE'
+E->&&E
+E->¿Õ
+F->ASS_F id
+F->ASS_F num
+F->(L) TRAN_LF
+F->¿Õ
+D->COMPARE_OP ==
+D->COMPARE_OP !=
+D->COMPARE_OP >
+D->COMPARE_OP <
+D->COMPARE_OP >=
+D->COMPARE_OP <=
+H->GH'
+H->||E
+H'->¿Õ
+L->TL' ADD_SUB
+L'->+L ADD
+L'->-L SUB
+L'->¿Õ
+T->FT' DIV_MUL
+T'->/T DIV
+T'->*T MUL
+T'->¿Õ
+
+/*×ÔÔö×Ô¼õ¸³ÖµÓï¾ä*/
+Q->@ASS_Q id O
+Q->¿Õ
+O->@SINGLE_OP ++
+O->@SINGLE_OP --
+O->¿Õ
+
+
+
